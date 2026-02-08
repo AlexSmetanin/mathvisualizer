@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="800.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.mathvisualizer.controller.HelloController">
+   <children>
+      <VBox prefHeight="800.0" prefWidth="600.0" spacing="10.0">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="600.0" spacing="10.0">
+               <children>
+                   <Label text="Функція:" />
+                   <ComboBox fx:id="functionComboBox" prefWidth="150.0" />
+                   <Label text="xMin:" />
+                   <TextField prefWidth="80" fx:id="xMinField" />
+                   <Label text="xMax:" />
+                   <TextField prefWidth="80" fx:id="xMaxField" />
+                   <Label text="Δx:" />
+                   <TextField fx:id="stepField" prefWidth="80" />
+               </children>
+            </HBox>
+
+            <HBox prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+               <children>
+                   <Button fx:id="calculateButton" text="Обчислити" />
+                   <Button fx:id="clearButton" text="Очистити" />
+                   <Button fx:id="reportButton" text="Звіт" />
+                   <Button fx:id="exitButton" text="Вихід" />
+               </children>
+            </HBox>
+
+            <LineChart fx:id="lineChart" prefHeight="400" title="Графік функції">
+              <xAxis>
+                  <NumberAxis label="X" />
+              </xAxis>
+              <yAxis>
+                  <NumberAxis label="Y" />
+              </yAxis>
+            </LineChart>
+         </children>
+         <padding>
+            <Insets left="5.0" top="10.0" />
+         </padding>
+      </VBox>
+   </children>
+</AnchorPane>
